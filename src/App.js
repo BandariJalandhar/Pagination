@@ -54,6 +54,7 @@ function App() {
             <p>Couny: {item.rating.count}</p>
           </div>
         ))}
+        
       </div>
       <div className="pagination-controls">
         <button onClick={prevPage} disabled={currentPage === 1}>
