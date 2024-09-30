@@ -7,7 +7,8 @@
   align-items: center;
 }
 .productCard{
-  border: 1px solid #333333;
+  border: 2px solid hsl(22, 85%, 55%);
+  border-radius: 10px;
   width: 350px;
   height: 550px;
   padding: 5px;

@@ -3,14 +3,14 @@ import './App.css';
 
 function App() {
   const [data, setData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1); 
-  const itemsPerPage = 3; 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('https://fakestoreapi.com/products');
       const result = await response.json();
-      setData(result); 
+      setData(result);
     };
     fetchData();
   }, []);
@@ -38,26 +38,23 @@ function App() {
     }
     return description;
   };
-console.log(data)
+
   return (
     <div className="App">
       <h1>Product Categories</h1>
-<div className='products'>
+      <div className='products'>
 
-
-      {/* Render the current items based on pagination */}
-      {currentItems.map((item, index) => (
-        <div key={index} className='productCard'>
-          <img src={item.image} className='productImage'/>
-          <p>{item.title}</p>
-          <p>Rs: {item.price}</p>
-          <p>Description:  {truncateDescription(item.description, 150)}</p>
-          <p>Rating: {item.rating.rate}</p>
-          <p>Couny: {item.rating.count}</p>
-        </div>
-      ))}
-</div>
-      {/* Pagination controls */}
+        {currentItems.map((item, index) => (
+          <div key={index} className='productCard'>
+            <img src={item.image} className='productImage' />
+            <p>{item.title}</p>
+            <p>Rs: {item.price}</p>
+            <p>Description:  {truncateDescription(item.description, 150)}</p>
+            <p>Rating: {item.rating.rate}</p>
+            <p>Couny: {item.rating.count}</p>
+          </div>
+        ))}
+      </div>
       <div className="pagination-controls">
         <button onClick={prevPage} disabled={currentPage === 1}>
           Previous
