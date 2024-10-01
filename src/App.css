@@ -19,3 +19,17 @@
   margin-top: 20px;
   width: 150px;
 }
+.btn{
+  height: 30px;
+  width: 80px;
+  border: none;
+  background-color:hsl(22, 85%, 55%) ;
+  color: white;
+  /* padding: 10px; */
+  border-radius: 5px;
+}
+.itemTitle{
+  color:hsl(22, 85%, 55%) ;
+  font-size: 20px;
+  font-weight: 600;
+}

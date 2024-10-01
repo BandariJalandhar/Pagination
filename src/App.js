@@ -47,7 +47,7 @@ function App() {
         {currentItems.map((item, index) => (
           <div key={index} className='productCard'>
             <img src={item.image} className='productImage' />
-            <p>{item.title}</p>
+            <p className='itemTitle'>{item.title}</p>
             <p>Rs: {item.price}</p>
             <p>Description:  {truncateDescription(item.description, 150)}</p>
             <p>Rating: {item.rating.rate}</p>
@@ -57,11 +57,11 @@ function App() {
         
       </div>
       <div className="pagination-controls">
-        <button onClick={prevPage} disabled={currentPage === 1}>
+        <button className='btn' onClick={prevPage} disabled={currentPage === 1}>
           Previous
         </button>
         <span> Page {currentPage} of {Math.ceil(data.length / itemsPerPage)} </span>
-        <button onClick={nextPage} disabled={currentPage === Math.ceil(data.length / itemsPerPage)}>
+        <button className='btn' onClick={nextPage} disabled={currentPage === Math.ceil(data.length / itemsPerPage)}>
           Next
         </button>
       </div>
