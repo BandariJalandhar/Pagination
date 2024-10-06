@@ -46,7 +46,7 @@ function App() {
 
         {currentItems.map((item, index) => (
           <div key={index} className='productCard'>
-            <img src={item.image} className='productImage' />
+            <img src={item.image} className='productImage' alt='img'/>
             <p className='itemTitle'>{item.title}</p>
             <p>Rs: {item.price}</p>
             <p>Description:  {truncateDescription(item.description, 150)}</p>
